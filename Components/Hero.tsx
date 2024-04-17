@@ -2,6 +2,7 @@
 import Custombtn from "./Custombtn";
 
 const Hero = () => {
+  const handleScroll = () => {};
   return (
     <div className=" hero">
       <div className=" flex-1 pt-36 padding-x">
@@ -13,7 +14,11 @@ const Hero = () => {
           Streamline Your Car Rental Experience With our Effortless Booking
           Website{" "}
         </p>
-        <Custombtn />
+        <Custombtn
+          title="Explore Cars"
+          containerStyles="bg-primary-blue mt-10 text-white rounded-full"
+          handleClick={handleScroll}
+        />
       </div>
     </div>
   );
