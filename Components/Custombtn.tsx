@@ -1,8 +1,11 @@
 import { CustomBntProps } from "@/types";
+import Image from "next/image";
 
 const Custombtn = ({
   title,
   containerStyles,
+  textStyles,
+  rightIcon,
   handleClick,
   btnType,
 }: CustomBntProps) => {
@@ -13,7 +16,16 @@ const Custombtn = ({
       className={`custom-btn ${containerStyles}`}
       onClick={handleClick}
     >
-      {title}
+      <div className={`${rightIcon && "flex gap-5"}`}>
+        <span className={textStyles}>{title}</span>
+        <Image
+          src={rightIcon!}
+          alt="icon"
+          height={20}
+          width={20}
+          className=" object-contain"
+        />
+      </div>
     </button>
   );
 };
