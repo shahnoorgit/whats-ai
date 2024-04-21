@@ -20,8 +20,8 @@ const SearchManufacturer = ({
             .includes(Queary.toLocaleLowerCase().replace(/\s+/g, ""))
         );
   return (
-    <div className="search-manufacturer m-10 max-sm:">
-      <Combobox>
+    <div className="search-manufacturer max-sm:">
+      <Combobox value={manufacturer} onChange={setmanufacturer}>
         <div className=" relative w-full">
           <Combobox.Button className=" absolute top-[14px]">
             <Image
