@@ -18,13 +18,15 @@ const Custombtn = ({
     >
       <div className={`${rightIcon && "flex gap-5"}`}>
         <span className={textStyles}>{title}</span>
-        <Image
-          src={rightIcon!}
-          alt="icon"
-          height={20}
-          width={20}
-          className=" object-contain"
-        />
+        {rightIcon && (
+          <Image
+            src={rightIcon!}
+            alt="icon"
+            height={20}
+            width={20}
+            className=" object-contain"
+          />
+        )}
       </div>
     </button>
   );
